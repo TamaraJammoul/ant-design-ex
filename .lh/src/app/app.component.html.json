@@ -1,0 +1,74 @@
+{
+    "sourceFile": "src/app/app.component.html",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 14,
+            "patches": [
+                {
+                    "date": 1628165138715,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1628165282671,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,1 @@\n-<!-- NG-ZORRO -->\n-<a href=\"https://github.com/NG-ZORRO/ng-zorro-antd\" target=\"_blank\" style=\"display: flex;align-items: center;justify-content: center;height: 100%;width: 100%;\">\n-  <img height=\"300\" src=\"https://img.alicdn.com/tfs/TB1X.qJJgHqK1RjSZFgXXa7JXXa-89-131.svg\">\n-</a>\n <button nz-button nzType=\"primary\">Primary</button>\n"
+                },
+                {
+                    "date": 1628165672702,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,22 @@\n-<button nz-button nzType=\"primary\">Primary</button>\n+<nz-table #basicTable [nzData]=\"listOfData\">\n+  <thead>\n+    <tr>\n+      <th>Name</th>\n+      <th>Age</th>\n+      <th>Address</th>\n+      <th>Action</th>\n+    </tr>\n+  </thead>\n+  <tbody>\n+    <tr *ngFor=\"let data of basicTable.data\">\n+      <td>{{data.name}}</td>\n+      <td>{{data.age}}</td>\n+      <td>{{data.address}}</td>\n+      <td>\n+        <a>Action 一 {{data.name}}</a>\n+        <nz-divider nzType=\"vertical\"></nz-divider>\n+        <a>Delete</a>\n+      </td>\n+    </tr>\n+  </tbody>\n+</nz-table>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1628166187896,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,5 @@\n+<!--table section-->\n <nz-table #basicTable [nzData]=\"listOfData\">\n   <thead>\n     <tr>\n       <th>Name</th>\n@@ -18,5 +19,15 @@\n         <a>Delete</a>\n       </td>\n     </tr>\n   </tbody>\n-</nz-table>\n\\ No newline at end of file\n+</nz-table>\n+\n+<!--modal section-->\n+<button nz-button [nzType]=\"'primary'\" (click)=\"showModal()\"><span>Show Modal</span></button>\n+<nz-modal [(nzVisible)]=\"isVisible\" nzTitle=\"The first Modal\" (nzOnCancel)=\"handleCancel()\" (nzOnOk)=\"handleOk()\">\n+  <ng-container *nzModalContent>\n+    <p>Content one</p>\n+    <p>Content two</p>\n+    <p>Content three</p>\n+  </ng-container>\n+</nz-modal>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1628166220022,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n   </tbody>\n </nz-table>\n \n <!--modal section-->\n-<button nz-button [nzType]=\"'primary'\" (click)=\"showModal()\"><span>Show Modal</span></button>\n+<button nz-button  (click)=\"showModal()\"><span>Show Modal</span></button>\n <nz-modal [(nzVisible)]=\"isVisible\" nzTitle=\"The first Modal\" (nzOnCancel)=\"handleCancel()\" (nzOnOk)=\"handleOk()\">\n   <ng-container *nzModalContent>\n     <p>Content one</p>\n     <p>Content two</p>\n"
+                },
+                {
+                    "date": 1628166420040,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,5 +29,16 @@\n     <p>Content one</p>\n     <p>Content two</p>\n     <p>Content three</p>\n   </ng-container>\n-</nz-modal>\n\\ No newline at end of file\n+</nz-modal>\n+\n+<!--detail page-->\n+<nz-descriptions nzTitle=\"User Info\">\n+  <nz-descriptions-item nzTitle=\"UserName\">Zhou Maomao</nz-descriptions-item>\n+  <nz-descriptions-item nzTitle=\"Telephone\">18100000000</nz-descriptions-item>\n+  <nz-descriptions-item nzTitle=\"Live\">Hangzhou, Zhejiang</nz-descriptions-item>\n+  <nz-descriptions-item nzTitle=\"Remark\">Empty</nz-descriptions-item>\n+  <nz-descriptions-item nzTitle=\"Address\">\n+    No. 18, Wantang Road, Xihu District, Hangzhou, Zhejiang, China\n+  </nz-descriptions-item>\n+</nz-descriptions>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1628166724218,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,44 +1,4 @@\n-<!--table section-->\n-<nz-table #basicTable [nzData]=\"listOfData\">\n-  <thead>\n-    <tr>\n-      <th>Name</th>\n-      <th>Age</th>\n-      <th>Address</th>\n-      <th>Action</th>\n-    </tr>\n-  </thead>\n-  <tbody>\n-    <tr *ngFor=\"let data of basicTable.data\">\n-      <td>{{data.name}}</td>\n-      <td>{{data.age}}</td>\n-      <td>{{data.address}}</td>\n-      <td>\n-        <a>Action 一 {{data.name}}</a>\n-        <nz-divider nzType=\"vertical\"></nz-divider>\n-        <a>Delete</a>\n-      </td>\n-    </tr>\n-  </tbody>\n-</nz-table>\n \n-<!--modal section-->\n-<button nz-button  (click)=\"showModal()\"><span>Show Modal</span></button>\n-<nz-modal [(nzVisible)]=\"isVisible\" nzTitle=\"The first Modal\" (nzOnCancel)=\"handleCancel()\" (nzOnOk)=\"handleOk()\">\n-  <ng-container *nzModalContent>\n-    <p>Content one</p>\n-    <p>Content two</p>\n-    <p>Content three</p>\n-  </ng-container>\n-</nz-modal>\n \n-<!--detail page-->\n-<nz-descriptions nzTitle=\"User Info\">\n-  <nz-descriptions-item nzTitle=\"UserName\">Zhou Maomao</nz-descriptions-item>\n-  <nz-descriptions-item nzTitle=\"Telephone\">18100000000</nz-descriptions-item>\n-  <nz-descriptions-item nzTitle=\"Live\">Hangzhou, Zhejiang</nz-descriptions-item>\n-  <nz-descriptions-item nzTitle=\"Remark\">Empty</nz-descriptions-item>\n-  <nz-descriptions-item nzTitle=\"Address\">\n-    No. 18, Wantang Road, Xihu District, Hangzhou, Zhejiang, China\n-  </nz-descriptions-item>\n-</nz-descriptions>\n\\ No newline at end of file\n+\n+\n"
+                },
+                {
+                    "date": 1628166815302,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,3 @@\n-\n-\n-\n-\n+<app-table></app-table>\n+<app-modal></app-modal>\n+<app-details></app-details>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1628167032916,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,5 @@\n-<app-table></app-table>\n-<app-modal></app-modal>\n-<app-details></app-details>\n\\ No newline at end of file\n+<div class=\"container\">\n+  <app-table></app-table>\n+  <app-modal></app-modal>\n+  <app-details></app-details>\n+</div>\n"
+                },
+                {
+                    "date": 1628167096746,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n <div class=\"container\">\n   <app-table></app-table>\n-  <app-modal></app-modal>\n+  <app-modal class=\"mt-12\"></app-modal>\n   <app-details></app-details>\n </div>\n"
+                },
+                {
+                    "date": 1628167234191,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n <div class=\"container\">\n-  <app-table></app-table>\n-  <app-modal class=\"mt-12\"></app-modal>\n-  <app-details></app-details>\n+  <app-table class=\"table-section\"></app-table>\n+  <app-modal class=\"modal-section\"></app-modal>\n+  <app-details class=\"detail-page\"></app-details>\n </div>\n"
+                },
+                {
+                    "date": 1628167430927,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,11 @@\n+<div class=\"container\">\n+  <div class=\"table-section\">\n+    <app-table></app-table>\n+  </div>\n+  <div class=\"modal-section\">\n+    <app-modal></app-modal>\n+  </div>\n+  <div class=\"detail-page\">\n+    <app-details></app-details>\n+  </div>\n+</div>\n"
+                },
+                {
+                    "date": 1628167802695,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,16 +1,5 @@\n <div class=\"container\">\n-  <div class=\"table-section\">\n     <app-table></app-table>\n-  </div>\n-  <div class=\"modal-section\">\n     <app-modal></app-modal>\n-  </div>\n-  <div class=\"detail-page\">\n     <app-details></app-details>\n-  </div>\n </div>\n-<div class=\"container\">\n-  <app-table class=\"table-section\"></app-table>\n-  <app-modal class=\"modal-section\"></app-modal>\n-  <app-details class=\"detail-page\"></app-details>\n-</div>\n"
+                },
+                {
+                    "date": 1628182832424,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,4 @@\n <div class=\"container\">\n     <app-table></app-table>\n-    <app-modal></app-modal>\n     <app-details></app-details>\n </div>\n"
+                },
+                {
+                    "date": 1628187795462,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,1 @@\n-<div class=\"container\">\n-    <app-table></app-table>\n-    <app-details></app-details>\n-</div>\n+<router-outlet></router-outlet>\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1628165138715,
+            "name": "Commit-0",
+            "content": "<!-- NG-ZORRO -->\n<a href=\"https://github.com/NG-ZORRO/ng-zorro-antd\" target=\"_blank\" style=\"display: flex;align-items: center;justify-content: center;height: 100%;width: 100%;\">\n  <img height=\"300\" src=\"https://img.alicdn.com/tfs/TB1X.qJJgHqK1RjSZFgXXa7JXXa-89-131.svg\">\n</a>\n<button nz-button nzType=\"primary\">Primary</button>\n"
+        }
+    ]
+}

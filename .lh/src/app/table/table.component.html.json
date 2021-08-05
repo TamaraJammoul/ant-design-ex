@@ -1,0 +1,58 @@
+{
+    "sourceFile": "src/app/table/table.component.html",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 10,
+            "patches": [
+                {
+                    "date": 1628166663375,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1628167554927,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,7 @@\n <!--table section-->\n+<h1 nz-typography>h1. Ant Design</h1>\n+\n <nz-table #basicTable [nzData]=\"listOfData\">\n   <thead>\n     <tr>\n       <th>Name</th>\n"
+                },
+                {
+                    "date": 1628167611897,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <!--table section-->\n-<h1 nz-typography>h1. Ant Design</h1>\n+<h1 nz-typography>Ant Design Table</h1>\n \n <nz-table #basicTable [nzData]=\"listOfData\">\n   <thead>\n     <tr>\n"
+                },
+                {
+                    "date": 1628167667463,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <!--table section-->\n-<h1 nz-typography>Ant Design Table</h1>\n+<h1 nz-typography class=\"text-center mt-4\">Ant Design Table</h1>\n \n <nz-table #basicTable [nzData]=\"listOfData\">\n   <thead>\n     <tr>\n"
+                },
+                {
+                    "date": 1628167736355,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <!--table section-->\n-<h1 nz-typography class=\"text-center mt-4\">Ant Design Table</h1>\n+<h1 nz-typography class=\"text-center mt-5 mb-5\">Ant Design Table</h1>\n \n <nz-table #basicTable [nzData]=\"listOfData\">\n   <thead>\n     <tr>\n"
+                },
+                {
+                    "date": 1628167919998,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <!--table section-->\n-<h1 nz-typography class=\"text-center mt-5 mb-5\">Ant Design Table</h1>\n+<h1 nz-typography class=\"text-center mt-5 mb-5 text-primary\">Ant Design Table</h1>\n \n <nz-table #basicTable [nzData]=\"listOfData\">\n   <thead>\n     <tr>\n"
+                },
+                {
+                    "date": 1628182832375,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,10 @@\n       <th>Name</th>\n       <th>Age</th>\n       <th>Address</th>\n       <th>Action</th>\n+      <th>  <button nz-button  (click)=\"showModal()\" class=\"bg-primary border-white text-white p-2\"><span>Show Modal</span></button>\n+      </th>\n     </tr>\n   </thead>\n   <tbody>\n     <tr *ngFor=\"let data of basicTable.data\">\n@@ -21,5 +23,12 @@\n         <a>Delete</a>\n       </td>\n     </tr>\n   </tbody>\n-</nz-table>\n\\ No newline at end of file\n+</nz-table>\n+<nz-modal [(nzVisible)]=\"isVisible\" nzTitle=\"The first Modal\" (nzOnCancel)=\"handleCancel()\" (nzOnOk)=\"handleOk()\">\n+  <ng-container *nzModalContent>\n+    <p>Content one</p>\n+    <p>Content two</p>\n+    <p>Content three</p>\n+  </ng-container>\n+</nz-modal>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1628187784004,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,37 @@\n+<!--table section-->\n+<div class=\"container\">\n+  <h1 nz-typography class=\"text-center mt-5 mb-5 text-primary\">Ant Design Table</h1>\n+\n+  <nz-table #basicTable [nzData]=\"listOfData\">\n+    <thead>\n+      <tr>\n+        <th>Name</th>\n+        <th>Age</th>\n+        <th>Address</th>\n+        <th>Action</th>\n+        <th> <button nz-button (click)=\"showModal()\" class=\"bg-primary border-white text-white p-2\"><span>Show\n+              Modal</span></button>\n+        </th>\n+      </tr>\n+    </thead>\n+    <tbody>\n+      <tr *ngFor=\"let data of basicTable.data\">\n+        <td>{{data.name}}</td>\n+        <td>{{data.age}}</td>\n+        <td>{{data.address}}</td>\n+        <td>\n+          <a>Action 一 {{data.name}}</a>\n+          <nz-divider nzType=\"vertical\"></nz-divider>\n+          <a>Delete</a>\n+        </td>\n+      </tr>\n+    </tbody>\n+  </nz-table>\n+  <nz-modal [(nzVisible)]=\"isVisible\" nzTitle=\"The first Modal\" (nzOnCancel)=\"handleCancel()\" (nzOnOk)=\"handleOk()\">\n+    <ng-container *nzModalContent>\n+      <p>Content one</p>\n+      <p>Content two</p>\n+      <p>Content three</p>\n+    </ng-container>\n+  </nz-modal>\n+</div>\n"
+                },
+                {
+                    "date": 1628188664827,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,8 +11,10 @@\n         <th>Action</th>\n         <th> <button nz-button (click)=\"showModal()\" class=\"bg-primary border-white text-white p-2\"><span>Show\n               Modal</span></button>\n         </th>\n+        <th> <button nz-button [routerLink]=\"'details'\" class=\"bg-primary border-white text-white p-2\"><span>details page</span></button>\n+    </th>\n       </tr>\n     </thead>\n     <tbody>\n       <tr *ngFor=\"let data of basicTable.data\">\n@@ -34,38 +36,4 @@\n       <p>Content three</p>\n     </ng-container>\n   </nz-modal>\n </div>\n-<!--table section-->\n-<h1 nz-typography class=\"text-center mt-5 mb-5 text-primary\">Ant Design Table</h1>\n-\n-<nz-table #basicTable [nzData]=\"listOfData\">\n-  <thead>\n-    <tr>\n-      <th>Name</th>\n-      <th>Age</th>\n-      <th>Address</th>\n-      <th>Action</th>\n-      <th>  <button nz-button  (click)=\"showModal()\" class=\"bg-primary border-white text-white p-2\"><span>Show Modal</span></button>\n-      </th>\n-    </tr>\n-  </thead>\n-  <tbody>\n-    <tr *ngFor=\"let data of basicTable.data\">\n-      <td>{{data.name}}</td>\n-      <td>{{data.age}}</td>\n-      <td>{{data.address}}</td>\n-      <td>\n-        <a>Action 一 {{data.name}}</a>\n-        <nz-divider nzType=\"vertical\"></nz-divider>\n-        <a>Delete</a>\n-      </td>\n-    </tr>\n-  </tbody>\n-</nz-table>\n-<nz-modal [(nzVisible)]=\"isVisible\" nzTitle=\"The first Modal\" (nzOnCancel)=\"handleCancel()\" (nzOnOk)=\"handleOk()\">\n-  <ng-container *nzModalContent>\n-    <p>Content one</p>\n-    <p>Content two</p>\n-    <p>Content three</p>\n-  </ng-container>\n-</nz-modal>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1628188683913,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n         <th>Action</th>\n         <th> <button nz-button (click)=\"showModal()\" class=\"bg-primary border-white text-white p-2\"><span>Show\n               Modal</span></button>\n         </th>\n-        <th> <button nz-button [routerLink]=\"'details'\" class=\"bg-primary border-white text-white p-2\"><span>details page</span></button>\n+        <th> <button nz-button [routerLink]=\"'details'\" class=\"bg-success border-white text-white p-2\"><span>details page</span></button>\n     </th>\n       </tr>\n     </thead>\n     <tbody>\n"
+                },
+                {
+                    "date": 1628188877221,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,9 @@\n <!--table section-->\n <div class=\"container\">\n+  <nz-breadcrumb class=\"mt-4\">\n+    <nz-breadcrumb-item>Home</nz-breadcrumb-item>\n+  </nz-breadcrumb>\n   <h1 nz-typography class=\"text-center mt-5 mb-5 text-primary\">Ant Design Table</h1>\n \n   <nz-table #basicTable [nzData]=\"listOfData\">\n     <thead>\n@@ -11,10 +14,11 @@\n         <th>Action</th>\n         <th> <button nz-button (click)=\"showModal()\" class=\"bg-primary border-white text-white p-2\"><span>Show\n               Modal</span></button>\n         </th>\n-        <th> <button nz-button [routerLink]=\"'details'\" class=\"bg-success border-white text-white p-2\"><span>details page</span></button>\n-    </th>\n+        <th> <button nz-button [routerLink]=\"'details'\" class=\"bg-success border-white text-white p-2\"><span>details\n+              page</span></button>\n+        </th>\n       </tr>\n     </thead>\n     <tbody>\n       <tr *ngFor=\"let data of basicTable.data\">\n"
+                }
+            ],
+            "date": 1628166663375,
+            "name": "Commit-0",
+            "content": "<!--table section-->\n<nz-table #basicTable [nzData]=\"listOfData\">\n  <thead>\n    <tr>\n      <th>Name</th>\n      <th>Age</th>\n      <th>Address</th>\n      <th>Action</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr *ngFor=\"let data of basicTable.data\">\n      <td>{{data.name}}</td>\n      <td>{{data.age}}</td>\n      <td>{{data.address}}</td>\n      <td>\n        <a>Action 一 {{data.name}}</a>\n        <nz-divider nzType=\"vertical\"></nz-divider>\n        <a>Delete</a>\n      </td>\n    </tr>\n  </tbody>\n</nz-table>"
+        }
+    ]
+}

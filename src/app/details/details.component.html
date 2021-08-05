@@ -1,0 +1,43 @@
+<!--detail page-->
+<div class="container">
+  <nz-breadcrumb class="mt-4">
+    <nz-breadcrumb-item><a [routerLink]="''">Home</a></nz-breadcrumb-item>
+    <nz-breadcrumb-item>
+      <a>Detail Page</a>
+    </nz-breadcrumb-item>
+  </nz-breadcrumb>
+
+  <h1 nz-typography class="text-center mt-5 mb-5 text-primary">Ant Design Detail Page</h1>
+
+  <nz-descriptions nzTitle="User Info">
+    <nz-descriptions-item nzTitle="UserName">Zhou Maomao</nz-descriptions-item>
+    <nz-descriptions-item nzTitle="Telephone">18100000000</nz-descriptions-item>
+    <nz-descriptions-item nzTitle="Live">Hangzhou, Zhejiang</nz-descriptions-item>
+    <nz-descriptions-item nzTitle="Remark">Empty</nz-descriptions-item>
+    <nz-descriptions-item nzTitle="Address">
+      No. 18, Wantang Road, Xihu District, Hangzhou, Zhejiang, China
+    </nz-descriptions-item>
+  </nz-descriptions>
+  <nz-progress [nzPercent]="30" class="mt-4 mb-4"></nz-progress>
+  <nz-carousel [nzEffect]="effect">
+    <div nz-carousel-content *ngFor="let index of array">
+      <h3>{{ index }}</h3>
+    </div>
+  </nz-carousel>
+
+  <h3 [ngStyle]="{ margin: '16px 0' }">Large Size</h3>
+  <ul nz-list [nzDataSource]="data" nzBordered nzSize="large">
+    <nz-list-header>Header</nz-list-header>
+    <li nz-list-item *ngFor="let item of data" nzNoFlex>
+      <ul nz-list-item-actions>
+        <nz-list-item-action>
+          <a>edit</a>
+        </nz-list-item-action>
+      </ul>
+      {{ item }}
+    </li>
+    <nz-list-footer>Footer</nz-list-footer>
+  </ul>
+  <img nz-image width="200px" class="mt-4 mb-4" height="200px"
+    nzSrc="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png" alt="" />
+</div>

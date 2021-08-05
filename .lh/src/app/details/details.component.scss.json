@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/app/details/details.component.scss",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1628188812980,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1628188812980,
+            "name": "Commit-0",
+            "content": "[nz-carousel-content] {\r\n    text-align: center;\r\n    height: 160px;\r\n    line-height: 160px;\r\n    background: #364d79;\r\n    color: #fff;\r\n    overflow: hidden;\r\n  }\r\n\r\n  h3 {\r\n    color: #fff;\r\n    margin-bottom: 0;\r\n    user-select: none;\r\n  }\r\n"
+        }
+    ]
+}

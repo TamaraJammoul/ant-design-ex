@@ -1,0 +1,22 @@
+{
+    "sourceFile": "src/app/table/table.component.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1628166702012,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1628182832262,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,5 +41,20 @@\n     }\n   ];\n \n   \n+  isVisible = false;\n+\n+  showModal(): void {\n+    this.isVisible = true;\n+  }\n+\n+  handleOk(): void {\n+    console.log('Button ok clicked!');\n+    this.isVisible = false;\n+  }\n+\n+  handleCancel(): void {\n+    console.log('Button cancel clicked!');\n+    this.isVisible = false;\n+  }\n }\n"
+                }
+            ],
+            "date": 1628166702012,
+            "name": "Commit-0",
+            "content": "import { Component, OnInit } from '@angular/core';\n\ninterface Person {\n  key: string;\n  name: string;\n  age: number;\n  address: string;\n}\n\n\n@Component({\n  selector: 'app-table',\n  templateUrl: './table.component.html',\n  styleUrls: ['./table.component.scss']\n})\nexport class TableComponent implements OnInit {\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n  listOfData: Person[] = [\n    {\n      key: '1',\n      name: 'John Brown',\n      age: 32,\n      address: 'New York No. 1 Lake Park'\n    },\n    {\n      key: '2',\n      name: 'Jim Green',\n      age: 42,\n      address: 'London No. 1 Lake Park'\n    },\n    {\n      key: '3',\n      name: 'Joe Black',\n      age: 32,\n      address: 'Sidney No. 1 Lake Park'\n    }\n  ];\n\n  \n}\n"
+        }
+    ]
+}

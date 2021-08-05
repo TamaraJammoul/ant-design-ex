@@ -1,0 +1,22 @@
+{
+    "sourceFile": "src/app/details/details.component.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1628187547152,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1628189291697,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,16 @@\n })\n export class DetailsComponent implements OnInit {\n   array = [1, 2, 3, 4];\n   effect = 'scrollx';\n+\n+  data = [\n+    'Racing car sprays burning fuel into crowd.',\n+    'Japanese princess to wed commoner.',\n+    'Australian walks 100km after outback crash.',\n+    'Man charged over missing wedding girl.',\n+    'Los Angeles battles huge wildfires.'\n+  ];\n   constructor() { }\n \n   ngOnInit(): void {\n   }\n"
+                }
+            ],
+            "date": 1628187547152,
+            "name": "Commit-0",
+            "content": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'app-details',\n  templateUrl: './details.component.html',\n  styleUrls: ['./details.component.scss']\n})\nexport class DetailsComponent implements OnInit {\n  array = [1, 2, 3, 4];\n  effect = 'scrollx';\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n"
+        }
+    ]
+}

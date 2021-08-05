@@ -1,0 +1,78 @@
+{
+    "sourceFile": "src/app/app.module.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 15,
+            "patches": [
+                {
+                    "date": 1628165489113,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1628165974860,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,9 @@\n import { FormsModule } from '@angular/forms';\n import { HttpClientModule } from '@angular/common/http';\n import { BrowserAnimationsModule } from '@angular/platform-browser/animations';\n import { NzTableModule } from 'ng-zorro-antd/table';\n+import { NzDividerModule } from 'ng-zorro-antd/divider';\n \n registerLocaleData(en);\n \n @NgModule({\n@@ -23,9 +24,10 @@\n     AppRoutingModule,\n     FormsModule,\n     HttpClientModule,\n     BrowserAnimationsModule,\n-    NzTableModule\n+    NzTableModule,\n+    NzDividerModule\n   ],\n   providers: [{ provide: NZ_I18N, useValue: en_US }],\n   bootstrap: [AppComponent]\n })\n"
+                },
+                {
+                    "date": 1628166096344,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,8 +11,9 @@\n import { HttpClientModule } from '@angular/common/http';\n import { BrowserAnimationsModule } from '@angular/platform-browser/animations';\n import { NzTableModule } from 'ng-zorro-antd/table';\n import { NzDividerModule } from 'ng-zorro-antd/divider';\n+import { NzModalModule } from 'ng-zorro-antd/modal';\n \n registerLocaleData(en);\n \n @NgModule({\n@@ -25,9 +26,10 @@\n     FormsModule,\n     HttpClientModule,\n     BrowserAnimationsModule,\n     NzTableModule,\n-    NzDividerModule\n+    NzDividerModule,\n+    NzModalModule\n   ],\n   providers: [{ provide: NZ_I18N, useValue: en_US }],\n   bootstrap: [AppComponent]\n })\n"
+                },
+                {
+                    "date": 1628166375126,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,8 +12,9 @@\n import { BrowserAnimationsModule } from '@angular/platform-browser/animations';\n import { NzTableModule } from 'ng-zorro-antd/table';\n import { NzDividerModule } from 'ng-zorro-antd/divider';\n import { NzModalModule } from 'ng-zorro-antd/modal';\n+import { NzDescriptionsModule } from 'ng-zorro-antd/descriptions';\n \n registerLocaleData(en);\n \n @NgModule({\n"
+                },
+                {
+                    "date": 1628166460970,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,10 @@\n     HttpClientModule,\n     BrowserAnimationsModule,\n     NzTableModule,\n     NzDividerModule,\n-    NzModalModule\n+    NzModalModule,\n+    NzDescriptionsModule\n   ],\n   providers: [{ provide: NZ_I18N, useValue: en_US }],\n   bootstrap: [AppComponent]\n })\n"
+                },
+                {
+                    "date": 1628167514593,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,14 +13,22 @@\n import { NzTableModule } from 'ng-zorro-antd/table';\n import { NzDividerModule } from 'ng-zorro-antd/divider';\n import { NzModalModule } from 'ng-zorro-antd/modal';\n import { NzDescriptionsModule } from 'ng-zorro-antd/descriptions';\n+import { DetailsComponent } from './details/details.component';\n+import { ModalComponent } from './modal/modal.component';\n+import { TableComponent } from './table/table.component';\n+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';\n+import { NzTypographyModule } from 'ng-zorro-antd/typography';\n \n registerLocaleData(en);\n \n @NgModule({\n   declarations: [\n-    AppComponent\n+    AppComponent,\n+    DetailsComponent,\n+    ModalComponent,\n+    TableComponent\n   ],\n   imports: [\n     BrowserModule,\n     AppRoutingModule,\n@@ -29,9 +37,12 @@\n     BrowserAnimationsModule,\n     NzTableModule,\n     NzDividerModule,\n     NzModalModule,\n-    NzDescriptionsModule\n+    NzDescriptionsModule,\n+    NgbModule,\n+    NzTypographyModule,\n+\n   ],\n   providers: [{ provide: NZ_I18N, useValue: en_US }],\n   bootstrap: [AppComponent]\n })\n"
+                },
+                {
+                    "date": 1628183028215,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,20 +14,19 @@\n import { NzDividerModule } from 'ng-zorro-antd/divider';\n import { NzModalModule } from 'ng-zorro-antd/modal';\n import { NzDescriptionsModule } from 'ng-zorro-antd/descriptions';\n import { DetailsComponent } from './details/details.component';\n-import { ModalComponent } from './modal/modal.component';\n import { TableComponent } from './table/table.component';\n import { NgbModule } from '@ng-bootstrap/ng-bootstrap';\n import { NzTypographyModule } from 'ng-zorro-antd/typography';\n+import { NzCommentModule } from 'ng-zorro-antd/comment';\n \n registerLocaleData(en);\n \n @NgModule({\n   declarations: [\n     AppComponent,\n     DetailsComponent,\n-    ModalComponent,\n     TableComponent\n   ],\n   imports: [\n     BrowserModule,\n@@ -40,9 +39,9 @@\n     NzModalModule,\n     NzDescriptionsModule,\n     NgbModule,\n     NzTypographyModule,\n-\n+    NzCommentModule\n   ],\n   providers: [{ provide: NZ_I18N, useValue: en_US }],\n   bootstrap: [AppComponent]\n })\n"
+                },
+                {
+                    "date": 1628187292581,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,6 @@\n-import { NgModule } from '@angular/core';\n+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';\n import { BrowserModule } from '@angular/platform-browser';\n-\n import { AppRoutingModule } from './app-routing.module';\n import { AppComponent } from './app.component';\n import { NZ_I18N } from 'ng-zorro-antd/i18n';\n import { en_US } from 'ng-zorro-antd/i18n';\n@@ -17,9 +16,10 @@\n import { DetailsComponent } from './details/details.component';\n import { TableComponent } from './table/table.component';\n import { NgbModule } from '@ng-bootstrap/ng-bootstrap';\n import { NzTypographyModule } from 'ng-zorro-antd/typography';\n-import { NzCommentModule } from 'ng-zorro-antd/comment';\n+import { NzProgressModule } from 'ng-zorro-antd/progress';\n+import { NzBackTopModule } from 'ng-zorro-antd/back-top';\n \n registerLocaleData(en);\n \n @NgModule({\n@@ -39,10 +39,14 @@\n     NzModalModule,\n     NzDescriptionsModule,\n     NgbModule,\n     NzTypographyModule,\n-    NzCommentModule\n+    NzProgressModule,\n+    NzBackTopModule,\n   ],\n   providers: [{ provide: NZ_I18N, useValue: en_US }],\n-  bootstrap: [AppComponent]\n+  bootstrap: [AppComponent],\n+  schemas: [\n+    CUSTOM_ELEMENTS_SCHEMA\n+  ],\n })\n export class AppModule { }\n"
+                },
+                {
+                    "date": 1628187512933,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n import { TableComponent } from './table/table.component';\n import { NgbModule } from '@ng-bootstrap/ng-bootstrap';\n import { NzTypographyModule } from 'ng-zorro-antd/typography';\n import { NzProgressModule } from 'ng-zorro-antd/progress';\n-import { NzBackTopModule } from 'ng-zorro-antd/back-top';\n+import { NzCarouselModule } from 'ng-zorro-antd/carousel';\n \n registerLocaleData(en);\n \n @NgModule({\n@@ -40,9 +40,9 @@\n     NzDescriptionsModule,\n     NgbModule,\n     NzTypographyModule,\n     NzProgressModule,\n-    NzBackTopModule,\n+    NzCarouselModule,\n   ],\n   providers: [{ provide: NZ_I18N, useValue: en_US }],\n   bootstrap: [AppComponent],\n   schemas: [\n"
+                },
+                {
+                    "date": 1628187655723,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,8 +18,9 @@\n import { NgbModule } from '@ng-bootstrap/ng-bootstrap';\n import { NzTypographyModule } from 'ng-zorro-antd/typography';\n import { NzProgressModule } from 'ng-zorro-antd/progress';\n import { NzCarouselModule } from 'ng-zorro-antd/carousel';\n+import { NzBreadCrumbModule } from 'ng-zorro-antd/breadcrumb';\n \n registerLocaleData(en);\n \n @NgModule({\n@@ -41,8 +42,9 @@\n     NgbModule,\n     NzTypographyModule,\n     NzProgressModule,\n     NzCarouselModule,\n+    NzBreadCrumbModule\n   ],\n   providers: [{ provide: NZ_I18N, useValue: en_US }],\n   bootstrap: [AppComponent],\n   schemas: [\n"
+                },
+                {
+                    "date": 1628187922907,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,18 +19,31 @@\n import { NzTypographyModule } from 'ng-zorro-antd/typography';\n import { NzProgressModule } from 'ng-zorro-antd/progress';\n import { NzCarouselModule } from 'ng-zorro-antd/carousel';\n import { NzBreadCrumbModule } from 'ng-zorro-antd/breadcrumb';\n+import { RouterModule, Routes } from '@angular/router';\n \n+\n registerLocaleData(en);\n \n+const routes: Routes = [\n+  {\n+    path: '',\n+    component: TableComponent,\n+  },\n+  {\n+    path: '',\n+    component: DetailsComponent,\n+  },\n+]\n @NgModule({\n   declarations: [\n     AppComponent,\n     DetailsComponent,\n     TableComponent\n   ],\n   imports: [\n+    RouterModule.forChild(routes),\n     BrowserModule,\n     AppRoutingModule,\n     FormsModule,\n     HttpClientModule,\n"
+                },
+                {
+                    "date": 1628187942599,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,12 +30,13 @@\n     path: '',\n     component: TableComponent,\n   },\n   {\n-    path: '',\n+    path: '/details',\n     component: DetailsComponent,\n   },\n-]\n+];\n+\n @NgModule({\n   declarations: [\n     AppComponent,\n     DetailsComponent,\n"
+                },
+                {
+                    "date": 1628188184428,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -63,6 +63,7 @@\n   bootstrap: [AppComponent],\n   schemas: [\n     CUSTOM_ELEMENTS_SCHEMA\n   ],\n+  exports: [RouterModule],\n })\n export class AppModule { }\n"
+                },
+                {
+                    "date": 1628188554679,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,9 +30,9 @@\n     path: '',\n     component: TableComponent,\n   },\n   {\n-    path: '/details',\n+    path: 'details',\n     component: DetailsComponent,\n   },\n ];\n \n"
+                },
+                {
+                    "date": 1628189264579,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,8 +20,9 @@\n import { NzProgressModule } from 'ng-zorro-antd/progress';\n import { NzCarouselModule } from 'ng-zorro-antd/carousel';\n import { NzBreadCrumbModule } from 'ng-zorro-antd/breadcrumb';\n import { RouterModule, Routes } from '@angular/router';\n+import { NzListModule } from 'ng-zorro-antd/list';\n \n \n registerLocaleData(en);\n \n@@ -56,9 +57,10 @@\n     NgbModule,\n     NzTypographyModule,\n     NzProgressModule,\n     NzCarouselModule,\n-    NzBreadCrumbModule\n+    NzBreadCrumbModule,\n+    NzListModule\n   ],\n   providers: [{ provide: NZ_I18N, useValue: en_US }],\n   bootstrap: [AppComponent],\n   schemas: [\n"
+                },
+                {
+                    "date": 1628189370993,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,8 +21,9 @@\n import { NzCarouselModule } from 'ng-zorro-antd/carousel';\n import { NzBreadCrumbModule } from 'ng-zorro-antd/breadcrumb';\n import { RouterModule, Routes } from '@angular/router';\n import { NzListModule } from 'ng-zorro-antd/list';\n+import { NzImageModule } from 'ng-zorro-antd/image';\n \n \n registerLocaleData(en);\n \n@@ -58,9 +59,10 @@\n     NzTypographyModule,\n     NzProgressModule,\n     NzCarouselModule,\n     NzBreadCrumbModule,\n-    NzListModule\n+    NzListModule,\n+    NzImageModule\n   ],\n   providers: [{ provide: NZ_I18N, useValue: en_US }],\n   bootstrap: [AppComponent],\n   schemas: [\n"
+                }
+            ],
+            "date": 1628165489113,
+            "name": "Commit-0",
+            "content": "import { NgModule } from '@angular/core';\nimport { BrowserModule } from '@angular/platform-browser';\n\nimport { AppRoutingModule } from './app-routing.module';\nimport { AppComponent } from './app.component';\nimport { NZ_I18N } from 'ng-zorro-antd/i18n';\nimport { en_US } from 'ng-zorro-antd/i18n';\nimport { registerLocaleData } from '@angular/common';\nimport en from '@angular/common/locales/en';\nimport { FormsModule } from '@angular/forms';\nimport { HttpClientModule } from '@angular/common/http';\nimport { BrowserAnimationsModule } from '@angular/platform-browser/animations';\nimport { NzTableModule } from 'ng-zorro-antd/table';\n\nregisterLocaleData(en);\n\n@NgModule({\n  declarations: [\n    AppComponent\n  ],\n  imports: [\n    BrowserModule,\n    AppRoutingModule,\n    FormsModule,\n    HttpClientModule,\n    BrowserAnimationsModule,\n    NzTableModule\n  ],\n  providers: [{ provide: NZ_I18N, useValue: en_US }],\n  bootstrap: [AppComponent]\n})\nexport class AppModule { }\n"
+        }
+    ]
+}

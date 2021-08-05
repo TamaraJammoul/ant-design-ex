@@ -1,0 +1,30 @@
+{
+    "sourceFile": "src/app/app.component.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1628165638497,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1628166183752,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,5 +33,23 @@\n       age: 32,\n       address: 'Sidney No. 1 Lake Park'\n     }\n   ];\n+\n+  isVisible = false;\n+\n+  constructor() {}\n+\n+  showModal(): void {\n+    this.isVisible = true;\n+  }\n+\n+  handleOk(): void {\n+    console.log('Button ok clicked!');\n+    this.isVisible = false;\n+  }\n+\n+  handleCancel(): void {\n+    console.log('Button cancel clicked!');\n+    this.isVisible = false;\n+  }\n }\n"
+                },
+                {
+                    "date": 1628166615505,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,22 +34,6 @@\n       address: 'Sidney No. 1 Lake Park'\n     }\n   ];\n \n-  isVisible = false;\n-\n-  constructor() {}\n-\n-  showModal(): void {\n-    this.isVisible = true;\n-  }\n-\n-  handleOk(): void {\n-    console.log('Button ok clicked!');\n-    this.isVisible = false;\n-  }\n-\n-  handleCancel(): void {\n-    console.log('Button cancel clicked!');\n-    this.isVisible = false;\n-  }\n+  \n }\n"
+                },
+                {
+                    "date": 1628166689837,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,39 +1,11 @@\n import { Component } from '@angular/core';\n \n-interface Person {\n-  key: string;\n-  name: string;\n-  age: number;\n-  address: string;\n-}\n-\n @Component({\n   selector: 'app-root',\n   templateUrl: './app.component.html',\n   styleUrls: ['./app.component.scss']\n })\n export class AppComponent {\n \n-  listOfData: Person[] = [\n-    {\n-      key: '1',\n-      name: 'John Brown',\n-      age: 32,\n-      address: 'New York No. 1 Lake Park'\n-    },\n-    {\n-      key: '2',\n-      name: 'Jim Green',\n-      age: 42,\n-      address: 'London No. 1 Lake Park'\n-    },\n-    {\n-      key: '3',\n-      name: 'Joe Black',\n-      age: 32,\n-      address: 'Sidney No. 1 Lake Park'\n-    }\n-  ];\n-\n-  \n+ \n }\n"
+                }
+            ],
+            "date": 1628165638497,
+            "name": "Commit-0",
+            "content": "import { Component } from '@angular/core';\n\ninterface Person {\n  key: string;\n  name: string;\n  age: number;\n  address: string;\n}\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.scss']\n})\nexport class AppComponent {\n\n  listOfData: Person[] = [\n    {\n      key: '1',\n      name: 'John Brown',\n      age: 32,\n      address: 'New York No. 1 Lake Park'\n    },\n    {\n      key: '2',\n      name: 'Jim Green',\n      age: 42,\n      address: 'London No. 1 Lake Park'\n    },\n    {\n      key: '3',\n      name: 'Joe Black',\n      age: 32,\n      address: 'Sidney No. 1 Lake Park'\n    }\n  ];\n}\n"
+        }
+    ]
+}

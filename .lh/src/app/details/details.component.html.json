@@ -1,0 +1,126 @@
+{
+    "sourceFile": "src/app/details/details.component.html",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 27,
+            "patches": [
+                {
+                    "date": 1628166646488,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1628167571811,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,7 @@\n <!--detail page-->\n+<h1 nz-typography>h1. Ant Design</h1>\n+\n <nz-descriptions nzTitle=\"User Info\">\n     <nz-descriptions-item nzTitle=\"UserName\">Zhou Maomao</nz-descriptions-item>\n     <nz-descriptions-item nzTitle=\"Telephone\">18100000000</nz-descriptions-item>\n     <nz-descriptions-item nzTitle=\"Live\">Hangzhou, Zhejiang</nz-descriptions-item>\n"
+                },
+                {
+                    "date": 1628167588966,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <!--detail page-->\n-<h1 nz-typography>h1. Ant Design</h1>\n+<h1 nz-typography>Ant Design Detail Page</h1>\n \n <nz-descriptions nzTitle=\"User Info\">\n     <nz-descriptions-item nzTitle=\"UserName\">Zhou Maomao</nz-descriptions-item>\n     <nz-descriptions-item nzTitle=\"Telephone\">18100000000</nz-descriptions-item>\n"
+                },
+                {
+                    "date": 1628167749145,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <!--detail page-->\n-<h1 nz-typography>Ant Design Detail Page</h1>\n+<h1 nz-typography class=\"text-center mt-5 mb-5\">Ant Design Detail Page</h1>\n \n <nz-descriptions nzTitle=\"User Info\">\n     <nz-descriptions-item nzTitle=\"UserName\">Zhou Maomao</nz-descriptions-item>\n     <nz-descriptions-item nzTitle=\"Telephone\">18100000000</nz-descriptions-item>\n"
+                },
+                {
+                    "date": 1628167901633,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <!--detail page-->\n-<h1 nz-typography class=\"text-center mt-5 mb-5\">Ant Design Detail Page</h1>\n+<h1 nz-typography class=\"text-center mt-5 mb-5 text-primary\">Ant Design Detail Page</h1>\n \n <nz-descriptions nzTitle=\"User Info\">\n     <nz-descriptions-item nzTitle=\"UserName\">Zhou Maomao</nz-descriptions-item>\n     <nz-descriptions-item nzTitle=\"Telephone\">18100000000</nz-descriptions-item>\n"
+                },
+                {
+                    "date": 1628183147576,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,5 +8,7 @@\n     <nz-descriptions-item nzTitle=\"Remark\">Empty</nz-descriptions-item>\n     <nz-descriptions-item nzTitle=\"Address\">\n       No. 18, Wantang Road, Xihu District, Hangzhou, Zhejiang, China\n     </nz-descriptions-item>\n-  </nz-descriptions>\n\\ No newline at end of file\n+  </nz-descriptions>\n+  <nz-progress [nzPercent]=\"30\"></nz-progress>\n+  <nz-progress [nzPercent]=\"50\" nzStatus=\"active\"></nz-progress>\n"
+                },
+                {
+                    "date": 1628183270381,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,4 +11,5 @@\n     </nz-descriptions-item>\n   </nz-descriptions>\n   <nz-progress [nzPercent]=\"30\"></nz-progress>\n   <nz-progress [nzPercent]=\"50\" nzStatus=\"active\"></nz-progress>\n+  <nz-back-top></nz-back-top>\n"
+                },
+                {
+                    "date": 1628184637525,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,7 +9,7 @@\n     <nz-descriptions-item nzTitle=\"Address\">\n       No. 18, Wantang Road, Xihu District, Hangzhou, Zhejiang, China\n     </nz-descriptions-item>\n   </nz-descriptions>\n-  <nz-progress [nzPercent]=\"30\"></nz-progress>\n-  <nz-progress [nzPercent]=\"50\" nzStatus=\"active\"></nz-progress>\n+  <nz-progress [ngModel]=\"30\"></nz-progress>\n+  <nz-progress [ngModel]=\"50\" nzStatus=\"active\"></nz-progress>\n   <nz-back-top></nz-back-top>\n"
+                },
+                {
+                    "date": 1628184705256,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,5 +11,4 @@\n     </nz-descriptions-item>\n   </nz-descriptions>\n   <nz-progress [ngModel]=\"30\"></nz-progress>\n   <nz-progress [ngModel]=\"50\" nzStatus=\"active\"></nz-progress>\n-  <nz-back-top></nz-back-top>\n"
+                },
+                {
+                    "date": 1628187179325,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,6 +9,6 @@\n     <nz-descriptions-item nzTitle=\"Address\">\n       No. 18, Wantang Road, Xihu District, Hangzhou, Zhejiang, China\n     </nz-descriptions-item>\n   </nz-descriptions>\n-  <nz-progress [ngModel]=\"30\"></nz-progress>\n-  <nz-progress [ngModel]=\"50\" nzStatus=\"active\"></nz-progress>\n+  <nz-progress [nzPercent]=\"30\"></nz-progress>\n+  <nz-progress [nzPercent]=\"50\" nzStatus=\"active\"></nz-progress>\n"
+                },
+                {
+                    "date": 1628187362326,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,5 +10,5 @@\n       No. 18, Wantang Road, Xihu District, Hangzhou, Zhejiang, China\n     </nz-descriptions-item>\n   </nz-descriptions>\n   <nz-progress [nzPercent]=\"30\"></nz-progress>\n-  <nz-progress [nzPercent]=\"50\" nzStatus=\"active\"></nz-progress>\n+  <nz-back-top></nz-back-top>\n"
+                },
+                {
+                    "date": 1628187413933,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n <!--detail page-->\n <h1 nz-typography class=\"text-center mt-5 mb-5 text-primary\">Ant Design Detail Page</h1>\n+<nz-back-top></nz-back-top>\n \n <nz-descriptions nzTitle=\"User Info\">\n     <nz-descriptions-item nzTitle=\"UserName\">Zhou Maomao</nz-descriptions-item>\n     <nz-descriptions-item nzTitle=\"Telephone\">18100000000</nz-descriptions-item>\n@@ -10,5 +11,4 @@\n       No. 18, Wantang Road, Xihu District, Hangzhou, Zhejiang, China\n     </nz-descriptions-item>\n   </nz-descriptions>\n   <nz-progress [nzPercent]=\"30\"></nz-progress>\n-  <nz-back-top></nz-back-top>\n"
+                },
+                {
+                    "date": 1628187436260,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,6 @@\n <!--detail page-->\n <h1 nz-typography class=\"text-center mt-5 mb-5 text-primary\">Ant Design Detail Page</h1>\n-<nz-back-top></nz-back-top>\n \n <nz-descriptions nzTitle=\"User Info\">\n     <nz-descriptions-item nzTitle=\"UserName\">Zhou Maomao</nz-descriptions-item>\n     <nz-descriptions-item nzTitle=\"Telephone\">18100000000</nz-descriptions-item>\n"
+                },
+                {
+                    "date": 1628187600554,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,4 +10,9 @@\n       No. 18, Wantang Road, Xihu District, Hangzhou, Zhejiang, China\n     </nz-descriptions-item>\n   </nz-descriptions>\n   <nz-progress [nzPercent]=\"30\"></nz-progress>\n+  <nz-carousel [nzEffect]=\"effect\">\n+    <div nz-carousel-content *ngFor=\"let index of array\">\n+      <h3>{{ index }}</h3>\n+    </div>\n+  </nz-carousel>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1628187681008,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,12 @@\n <!--detail page-->\n+<nz-breadcrumb>\n+  <nz-breadcrumb-item>Home</nz-breadcrumb-item>\n+  <nz-breadcrumb-item>\n+    <a>Application List</a>\n+  </nz-breadcrumb-item>\n+  <nz-breadcrumb-item>An Application</nz-breadcrumb-item>\n+</nz-breadcrumb>\n <h1 nz-typography class=\"text-center mt-5 mb-5 text-primary\">Ant Design Detail Page</h1>\n \n <nz-descriptions nzTitle=\"User Info\">\n     <nz-descriptions-item nzTitle=\"UserName\">Zhou Maomao</nz-descriptions-item>\n"
+                },
+                {
+                    "date": 1628187770354,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,27 @@\n+<!--detail page-->\n+<div class=\"container\">\n+  <nz-breadcrumb>\n+    <nz-breadcrumb-item>Home</nz-breadcrumb-item>\n+    <nz-breadcrumb-item>\n+      <a>Application List</a>\n+    </nz-breadcrumb-item>\n+    <nz-breadcrumb-item>An Application</nz-breadcrumb-item>\n+  </nz-breadcrumb>\n+  <h1 nz-typography class=\"text-center mt-5 mb-5 text-primary\">Ant Design Detail Page</h1>\n+\n+  <nz-descriptions nzTitle=\"User Info\">\n+    <nz-descriptions-item nzTitle=\"UserName\">Zhou Maomao</nz-descriptions-item>\n+    <nz-descriptions-item nzTitle=\"Telephone\">18100000000</nz-descriptions-item>\n+    <nz-descriptions-item nzTitle=\"Live\">Hangzhou, Zhejiang</nz-descriptions-item>\n+    <nz-descriptions-item nzTitle=\"Remark\">Empty</nz-descriptions-item>\n+    <nz-descriptions-item nzTitle=\"Address\">\n+      No. 18, Wantang Road, Xihu District, Hangzhou, Zhejiang, China\n+    </nz-descriptions-item>\n+  </nz-descriptions>\n+  <nz-progress [nzPercent]=\"30\"></nz-progress>\n+  <nz-carousel [nzEffect]=\"effect\">\n+    <div nz-carousel-content *ngFor=\"let index of array\">\n+      <h3>{{ index }}</h3>\n+    </div>\n+  </nz-carousel>\n+</div>\n"
+                },
+                {
+                    "date": 1628188772505,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,13 @@\n <!--detail page-->\n <div class=\"container\">\n-  <nz-breadcrumb>\n+  <nz-breadcrumb class=\"mt-4\">\n     <nz-breadcrumb-item>Home</nz-breadcrumb-item>\n     <nz-breadcrumb-item>\n-      <a>Application List</a>\n+      <a>Detail Page</a>\n     </nz-breadcrumb-item>\n-    <nz-breadcrumb-item>An Application</nz-breadcrumb-item>\n   </nz-breadcrumb>\n+\n   <h1 nz-typography class=\"text-center mt-5 mb-5 text-primary\">Ant Design Detail Page</h1>\n \n   <nz-descriptions nzTitle=\"User Info\">\n     <nz-descriptions-item nzTitle=\"UserName\">Zhou Maomao</nz-descriptions-item>\n@@ -17,36 +17,11 @@\n     <nz-descriptions-item nzTitle=\"Address\">\n       No. 18, Wantang Road, Xihu District, Hangzhou, Zhejiang, China\n     </nz-descriptions-item>\n   </nz-descriptions>\n-  <nz-progress [nzPercent]=\"30\"></nz-progress>\n+  <nz-progress [nzPercent]=\"30\" class=\"mt-4\"></nz-progress>\n   <nz-carousel [nzEffect]=\"effect\">\n     <div nz-carousel-content *ngFor=\"let index of array\">\n       <h3>{{ index }}</h3>\n     </div>\n   </nz-carousel>\n </div>\n-<!--detail page-->\n-<nz-breadcrumb>\n-  <nz-breadcrumb-item>Home</nz-breadcrumb-item>\n-  <nz-breadcrumb-item>\n-    <a>Application List</a>\n-  </nz-breadcrumb-item>\n-  <nz-breadcrumb-item>An Application</nz-breadcrumb-item>\n-</nz-breadcrumb>\n-<h1 nz-typography class=\"text-center mt-5 mb-5 text-primary\">Ant Design Detail Page</h1>\n-\n-<nz-descriptions nzTitle=\"User Info\">\n-    <nz-descriptions-item nzTitle=\"UserName\">Zhou Maomao</nz-descriptions-item>\n-    <nz-descriptions-item nzTitle=\"Telephone\">18100000000</nz-descriptions-item>\n-    <nz-descriptions-item nzTitle=\"Live\">Hangzhou, Zhejiang</nz-descriptions-item>\n-    <nz-descriptions-item nzTitle=\"Remark\">Empty</nz-descriptions-item>\n-    <nz-descriptions-item nzTitle=\"Address\">\n-      No. 18, Wantang Road, Xihu District, Hangzhou, Zhejiang, China\n-    </nz-descriptions-item>\n-  </nz-descriptions>\n-  <nz-progress [nzPercent]=\"30\"></nz-progress>\n-  <nz-carousel [nzEffect]=\"effect\">\n-    <div nz-carousel-content *ngFor=\"let index of array\">\n-      <h3>{{ index }}</h3>\n-    </div>\n\\ No newline at end of file\n-  </nz-carousel>\n"
+                },
+                {
+                    "date": 1628188786153,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n       No. 18, Wantang Road, Xihu District, Hangzhou, Zhejiang, China\n     </nz-descriptions-item>\n   </nz-descriptions>\n   <nz-progress [nzPercent]=\"30\" class=\"mt-4\"></nz-progress>\n-  <nz-carousel [nzEffect]=\"effect\">\n+  <nz-carousel [nzEffect]=\"effect\" class=\"carousel\">\n     <div nz-carousel-content *ngFor=\"let index of array\">\n       <h3>{{ index }}</h3>\n     </div>\n   </nz-carousel>\n"
+                },
+                {
+                    "date": 1628188817862,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n       No. 18, Wantang Road, Xihu District, Hangzhou, Zhejiang, China\n     </nz-descriptions-item>\n   </nz-descriptions>\n   <nz-progress [nzPercent]=\"30\" class=\"mt-4\"></nz-progress>\n-  <nz-carousel [nzEffect]=\"effect\" class=\"carousel\">\n+  <nz-carousel [nzEffect]=\"effect\" class=\"mt-4\">\n     <div nz-carousel-content *ngFor=\"let index of array\">\n       <h3>{{ index }}</h3>\n     </div>\n   </nz-carousel>\n"
+                },
+                {
+                    "date": 1628188835635,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n       No. 18, Wantang Road, Xihu District, Hangzhou, Zhejiang, China\n     </nz-descriptions-item>\n   </nz-descriptions>\n   <nz-progress [nzPercent]=\"30\" class=\"mt-4\"></nz-progress>\n-  <nz-carousel [nzEffect]=\"effect\" class=\"mt-4\">\n+  <nz-carousel [nzEffect]=\"effect\" >\n     <div nz-carousel-content *ngFor=\"let index of array\">\n       <h3>{{ index }}</h3>\n     </div>\n   </nz-carousel>\n"
+                },
+                {
+                    "date": 1628188888163,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n <!--detail page-->\n <div class=\"container\">\n   <nz-breadcrumb class=\"mt-4\">\n-    <nz-breadcrumb-item>Home</nz-breadcrumb-item>\n+    <nz-breadcrumb-item [routerLink]=\"\">Home</nz-breadcrumb-item>\n     <nz-breadcrumb-item>\n       <a>Detail Page</a>\n     </nz-breadcrumb-item>\n   </nz-breadcrumb>\n"
+                },
+                {
+                    "date": 1628188931337,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n <!--detail page-->\n <div class=\"container\">\n   <nz-breadcrumb class=\"mt-4\">\n-    <nz-breadcrumb-item [routerLink]=\"\">Home</nz-breadcrumb-item>\n+    <nz-breadcrumb-item><a [routerLink]=\"\">Home</a></nz-breadcrumb-item>\n     <nz-breadcrumb-item>\n       <a>Detail Page</a>\n     </nz-breadcrumb-item>\n   </nz-breadcrumb>\n"
+                },
+                {
+                    "date": 1628188957591,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n <!--detail page-->\n <div class=\"container\">\n   <nz-breadcrumb class=\"mt-4\">\n-    <nz-breadcrumb-item><a [routerLink]=\"\">Home</a></nz-breadcrumb-item>\n+    <nz-breadcrumb-item><a [routerLink]=\"''\">Home</a></nz-breadcrumb-item>\n     <nz-breadcrumb-item>\n       <a>Detail Page</a>\n     </nz-breadcrumb-item>\n   </nz-breadcrumb>\n"
+                },
+                {
+                    "date": 1628189063819,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n     <nz-descriptions-item nzTitle=\"Address\">\n       No. 18, Wantang Road, Xihu District, Hangzhou, Zhejiang, China\n     </nz-descriptions-item>\n   </nz-descriptions>\n-  <nz-progress [nzPercent]=\"30\" class=\"mt-4\"></nz-progress>\n+  <nz-progress [nzPercent]=\"30\" class=\"mt-4 mb-4\"></nz-progress>\n   <nz-carousel [nzEffect]=\"effect\" >\n     <div nz-carousel-content *ngFor=\"let index of array\">\n       <h3>{{ index }}</h3>\n     </div>\n"
+                },
+                {
+                    "date": 1628189152472,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,5 +23,25 @@\n     <div nz-carousel-content *ngFor=\"let index of array\">\n       <h3>{{ index }}</h3>\n     </div>\n   </nz-carousel>\n+\n+  <div>\n+    <cdk-virtual-scroll-viewport itemSize=\"73\" class=\"demo-infinite-container\">\n+      <nz-list>\n+        <nz-list-item *cdkVirtualFor=\"let item of ds\">\n+          <nz-skeleton *ngIf=\"!item\" [nzAvatar]=\"true\" [nzParagraph]=\"{ rows: 1 }\"></nz-skeleton>\n+          <nz-list-item-meta\n+            *ngIf=\"item\"\n+            nzAvatar=\"https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png\"\n+            [nzDescription]=\"item.email\"\n+          >\n+            <nz-list-item-meta-title>\n+              <a href=\"https://ng.ant.design\">{{ item.name.last }}</a>\n+            </nz-list-item-meta-title>\n+          </nz-list-item-meta>\n+        </nz-list-item>\n+      </nz-list>\n+    </cdk-virtual-scroll-viewport>\n+  </div>\n </div>\n+\n"
+                },
+                {
+                    "date": 1628189184004,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,24 +24,7 @@\n       <h3>{{ index }}</h3>\n     </div>\n   </nz-carousel>\n \n-  <div>\n-    <cdk-virtual-scroll-viewport itemSize=\"73\" class=\"demo-infinite-container\">\n-      <nz-list>\n-        <nz-list-item *cdkVirtualFor=\"let item of ds\">\n-          <nz-skeleton *ngIf=\"!item\" [nzAvatar]=\"true\" [nzParagraph]=\"{ rows: 1 }\"></nz-skeleton>\n-          <nz-list-item-meta\n-            *ngIf=\"item\"\n-            nzAvatar=\"https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png\"\n-            [nzDescription]=\"item.email\"\n-          >\n-            <nz-list-item-meta-title>\n-              <a href=\"https://ng.ant.design\">{{ item.name.last }}</a>\n-            </nz-list-item-meta-title>\n-          </nz-list-item-meta>\n-        </nz-list-item>\n-      </nz-list>\n-    </cdk-virtual-scroll-viewport>\n-  </div>\n+  \n </div>\n \n"
+                },
+                {
+                    "date": 1628189304267,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,7 +24,19 @@\n       <h3>{{ index }}</h3>\n     </div>\n   </nz-carousel>\n \n-  \n+  <h3 [ngStyle]=\"{ margin: '16px 0' }\">Large Size</h3>\n+  <ul nz-list [nzDataSource]=\"data\" nzBordered nzSize=\"large\">\n+    <nz-list-header>Header</nz-list-header>\n+    <li nz-list-item *ngFor=\"let item of data\" nzNoFlex>\n+      <ul nz-list-item-actions>\n+        <nz-list-item-action>\n+          <a>edit</a>\n+        </nz-list-item-action>\n+      </ul>\n+      {{ item }}\n+    </li>\n+    <nz-list-footer>Footer</nz-list-footer>\n+  </ul>\n </div>\n \n"
+                },
+                {
+                    "date": 1628189418254,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,43 @@\n+<!--detail page-->\n+<div class=\"container\">\n+  <nz-breadcrumb class=\"mt-4\">\n+    <nz-breadcrumb-item><a [routerLink]=\"''\">Home</a></nz-breadcrumb-item>\n+    <nz-breadcrumb-item>\n+      <a>Detail Page</a>\n+    </nz-breadcrumb-item>\n+  </nz-breadcrumb>\n+\n+  <h1 nz-typography class=\"text-center mt-5 mb-5 text-primary\">Ant Design Detail Page</h1>\n+\n+  <nz-descriptions nzTitle=\"User Info\">\n+    <nz-descriptions-item nzTitle=\"UserName\">Zhou Maomao</nz-descriptions-item>\n+    <nz-descriptions-item nzTitle=\"Telephone\">18100000000</nz-descriptions-item>\n+    <nz-descriptions-item nzTitle=\"Live\">Hangzhou, Zhejiang</nz-descriptions-item>\n+    <nz-descriptions-item nzTitle=\"Remark\">Empty</nz-descriptions-item>\n+    <nz-descriptions-item nzTitle=\"Address\">\n+      No. 18, Wantang Road, Xihu District, Hangzhou, Zhejiang, China\n+    </nz-descriptions-item>\n+  </nz-descriptions>\n+  <nz-progress [nzPercent]=\"30\" class=\"mt-4 mb-4\"></nz-progress>\n+  <nz-carousel [nzEffect]=\"effect\">\n+    <div nz-carousel-content *ngFor=\"let index of array\">\n+      <h3>{{ index }}</h3>\n+    </div>\n+  </nz-carousel>\n+\n+  <h3 [ngStyle]=\"{ margin: '16px 0' }\">Large Size</h3>\n+  <ul nz-list [nzDataSource]=\"data\" nzBordered nzSize=\"large\">\n+    <nz-list-header>Header</nz-list-header>\n+    <li nz-list-item *ngFor=\"let item of data\" nzNoFlex>\n+      <ul nz-list-item-actions>\n+        <nz-list-item-action>\n+          <a>edit</a>\n+        </nz-list-item-action>\n+      </ul>\n+      {{ item }}\n+    </li>\n+    <nz-list-footer>Footer</nz-list-footer>\n+  </ul>\n+  <img nz-image width=\"200px\" class=\"mt-4 mb-4\" height=\"200px\"\n+    nzSrc=\"https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png\" alt=\"\" />\n+</div>\n"
+                }
+            ],
+            "date": 1628166646488,
+            "name": "Commit-0",
+            "content": "<!--detail page-->\n<nz-descriptions nzTitle=\"User Info\">\n    <nz-descriptions-item nzTitle=\"UserName\">Zhou Maomao</nz-descriptions-item>\n    <nz-descriptions-item nzTitle=\"Telephone\">18100000000</nz-descriptions-item>\n    <nz-descriptions-item nzTitle=\"Live\">Hangzhou, Zhejiang</nz-descriptions-item>\n    <nz-descriptions-item nzTitle=\"Remark\">Empty</nz-descriptions-item>\n    <nz-descriptions-item nzTitle=\"Address\">\n      No. 18, Wantang Road, Xihu District, Hangzhou, Zhejiang, China\n    </nz-descriptions-item>\n  </nz-descriptions>"
+        }
+    ]
+}
